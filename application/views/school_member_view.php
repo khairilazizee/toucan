@@ -23,7 +23,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php $bil=0; $this->load->helper("general"); foreach($maklumat_member as $member): $bil++; ?>
+						<?php $bil=0; foreach($maklumat_member as $member): $bil++; ?>
 							<tr>
 								<td><?php echo $bil;?></td>
 								<td><?php echo $member->member_name;?></td>
