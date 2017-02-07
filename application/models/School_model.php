@@ -68,6 +68,10 @@ class School_model extends CI_Model {
 
 	public function maklumat_member($idschool){ // school's member information
 
+		// member.member_name, member.member_email
+		// LEFT JOIN member ON member.member_id=register.member_id
+		// WHERE school_id='{$idschool}'
+
 		$this->db->select("member.member_name, member.member_email");
 		$this->db->from("register");
 		$this->db->join("member", "member.member_id=register.member_id","LEFT");
