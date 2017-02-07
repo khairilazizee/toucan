@@ -5,7 +5,15 @@ class Register_model extends CI_Model {
 
 	public function allRegistration(){
 
-		$query = $this->db->get("register");
+		// member.member_name, member.member_email, school.school_desc
+		// LEFT JOIN member ON member.member_id=register.member_id
+		// LEFT JOIN school ON school.school_id=register.school_id
+
+		$this->db->select("member.member_name, member.member_email, school.school_desc");
+		$this->db->from("register");
+		$this->db->join("member","member.member_id=register.member_id", "LEFT");
+		$this->db->join("school","school.school_id=register.school_id","LEFT");
+		$query = $this->db->get();
 
 		return $query->result();
 

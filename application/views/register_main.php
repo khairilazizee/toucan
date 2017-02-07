@@ -30,9 +30,9 @@
 							<?php $bil=0; $this->load->helper("general"); foreach($registration_list as $reg): $bil++; ?>
 								<tr>
 									<td><?php echo $bil;?></td>
-									<td><?php echo getdesc("member","member_name","member_id",$reg->member_id);?></td>
-									<td><?php echo getdesc("member","member_email","member_id",$reg->member_id);?></td>
-									<td><?php echo getdesc("school","school_desc","schooL_id",$reg->school_id);?></td>
+									<td><?php echo $reg->member_name;?></td>
+									<td><?php echo $reg->member_email;?></td>
+									<td><?php echo $reg->school_desc;?></td>
 									<td width="10">Edit</td>
 									<td width="10">Delete</td>
 								</tr>
