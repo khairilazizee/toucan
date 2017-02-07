@@ -26,8 +26,8 @@
 						<?php $bil=0; $this->load->helper("general"); foreach($maklumat_member as $member): $bil++; ?>
 							<tr>
 								<td><?php echo $bil;?></td>
-								<td><?php echo getdesc("member","member_name","member_id",$member->member_id);?></td>
-								<td><?php echo getdesc("member","member_email","member_id",$member->member_id);?></td>
+								<td><?php echo $member->member_name;?></td>
+								<td><?php echo $member->member_email;?></td>
 								<td width="10">Edit</td>
 								<td width="10">Delete</td>
 							</tr>
