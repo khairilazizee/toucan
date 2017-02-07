@@ -26,7 +26,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php $bil=0; $this->load->helper("general"); foreach($member_list as $reg): $bil++; ?>
+							<?php $bil=0; foreach($member_list as $reg): $bil++; ?>
 								<tr>
 									<td><?php echo $bil;?></td>
 									<td><?php echo $reg->member_name;?></td>
